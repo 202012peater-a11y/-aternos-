@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم لإدارة السيرفر</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #2f3136; color: #f6f6f7; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .form-container { background-color: #36393f; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); width: 100%; max-width: 500px; }
+        h2 { text-align: center; color: #fff; margin-bottom: 20px; }
+        label { display: block; margin-top: 15px; margin-bottom: 5px; color: #b9bbbe; font-size: 14px; }
+        input, textarea, select { width: 100%; padding: 10px; border: 1px solid #202225; border-radius: 4px; background-color: #40444b; color: #dcddde; box-sizing: border-box; font-size: 15px; }
+        input:focus, textarea:focus, select:focus { outline: 1px solid #7289da; }
+        button { width: 100%; padding: 12px; background-color: #5865F2; color: white; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; margin-top: 25px; cursor: pointer; transition: background 0.2s; }
+        button:hover { background-color: #4752c4; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>📝 استمارة تقديم للسيرفر</h2>
+    
+    <form action="https://web3forms.com" method="POST">
+        
+        <!-- 🔴 ضع مفتاح الـ Access Key الخاص بك هنا -->
+        <input type="hidden" name="access_key" value="ضع_مفتاح_Web3Forms_هنا">
+        
+        <!-- 🔴 ضع رابط ديسكورد الـ Webhook الخاص بك هنا -->
+        <input type="hidden" name="webhook" value="ضع_رابط_الـ_Webhook_هنا">
+
+        <!-- عنوان الرسالة التي ستصل للديسكورد -->
+        <input type="hidden" name="from_name" value="تقديم جديد للـ Staff">
+
+        <label for="discord">اسمك في الديسكورد (مع الهاشتاق أو الجديد):</label>
+        <input type="text" id="discord" name="اسم_المقدم" placeholder="مثال: Username" required>
+
+        <label for="age">العمر:</label>
+        <input type="number" id="age" name="العمر" required>
+
+        <label for="experience">هل لديك خبرة سابقة في الإدارة؟</label>
+        <select id="experience" name="الخبرة_السابقة">
+            <option value="نعم">نعم، لدي خبرة</option>
+            <option value="لا">لا، هذه أول مرة</option>
+        </select>
+
+        <label for="why">لماذا يجب أن نقبلك في طاقم الإدارة؟</label>
+        <textarea id="why" name="السبب" rows="4" placeholder="اكتب سبب تقديمك بالتفصيل..." required></textarea>
+
+        <button type="submit">إرسال التقديم</button>
+    </form>
+</div>
+
+</body>
+</html>
